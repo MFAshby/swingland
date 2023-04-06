@@ -61,4 +61,14 @@
 		</java>
 		<record name="bin/test-swingland.log" action="stop"/>
 	</target>
+
+	<target name="test-jframe" depends="compile">
+		<record name="bin/test-jframe.log" action="start"/>
+		<java jar="bin/swingland.jar" fork="true">
+			<jvmarg value="-Djava.library.path=bin"/>
+			<jvmarg value="-Dashbysoft.log.level=${ashbysoft.log.level}"/>
+			<arg value="testjframe"/>
+		</java>
+		<record name="bin/test-jframe.log" action="stop"/>
+	</target>
 </project>

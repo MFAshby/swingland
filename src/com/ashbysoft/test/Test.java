@@ -10,6 +10,8 @@ public class Test {
                 new Wayland().run(args);
             else if (arg.equalsIgnoreCase("swingland"))
                 new Swingland().run(args);
+            else if (arg.equalsIgnoreCase("testjframe"))
+                new TestJFrame().run(args);
             else
                 System.out.println("usage: Test [wayland|swingland] [...]");
         }
